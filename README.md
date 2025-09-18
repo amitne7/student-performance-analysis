@@ -7,6 +7,32 @@ This document summarizes the exploratory data analysis (EDA), regression tasks, 
 
 ---
 
+## Quick Start
+### 1. Clone repository
+```bash
+git clone https://github.com/amitne7/student-performance-analysis
+cd student-performance-analysis
+```
+### 2. Create virtual environment
+```bash
+python -m venv .venv && source .venv/bin/activate
+```
+### 3. Install dependencies
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn factor_analyzer
+```
+### 4. Run notebook (executes all cells, saves output)
+```bash
+jupyter nbconvert --to notebook --execute "student-performance.ipynb" --output "artifacts/output.ipynb"
+```
+
+### 5. Open artifacts
+```bash
+jupyter notebook artifacts/output.ipynb
+```
+
+---
+
 ## 2.1 Question 1: Exploratory Data Analysis (EDA)
 
 ### 2.1.1 Size of the data
