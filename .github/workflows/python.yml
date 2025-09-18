@@ -38,4 +38,4 @@ jobs:
 
       # Run tests with Pytest (executes all notebooks)
       - name: Run Pytest on notebooks
-        run: pytest --nbmake student-performance-analysis.ipynb
+        run: pytest --nbmake student-performance.ipynb
