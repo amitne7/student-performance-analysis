@@ -1,0 +1,42 @@
+name: Python Notebook CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Setup Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy scikit-learn matplotlib seaborn factor_analyzer
+          pip install pytest nbmake ruff black
+
+      # Lint with Ruff
+      - name: Run Ruff
+        run: ruff check .
+
+      # Check formatting with Black
+      - name: Run Black (check only)
+        run: black --check .
+
+      # Run tests with Pytest (executes all notebooks)
+      - name: Run Pytest on notebooks
+        run: pytest --nbmake student-performance-analysis.ipynb
