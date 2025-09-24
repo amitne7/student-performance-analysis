@@ -1,3 +1,11 @@
+**Timeline:** 02 Jan 2024 - 31 Jan 2024   
+**Role:** Data Analyst      
+**Type of Project:** Data analysis (Academic Project)   
+**Location:** Huddersfield(UK)   
+**Outcome:** Learned **EDA** techniques and **factor analysis** methodology, implemented **Random Forest Regression** model, implemented **Random Forest Classifier** for categorical prediction, Explored problem domain: student performance prediction and attribute correlations.
+
+---
+
 # Student Performance Analysis
 Prediction of​ student’s ​performance using random forest regression​ 
 
@@ -196,6 +204,10 @@ jupyter notebook artifacts/output.ipynb
 - Figure 12: Confusion matrix  
 
 ---
+
+# Timeline
+**Progress log week wise**
+- [Progress log](PROGRESSLOG.md)
 
 
 
